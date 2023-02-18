@@ -7,3 +7,7 @@ This is an example for reproducing error describe in [https://github.com/pulumi/
 ```bash
 ./run.sh
 ```
+
+## Note
+
+This problem couldn't reproduce on M1 Mac.
