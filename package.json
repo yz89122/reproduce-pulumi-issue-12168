@@ -1,0 +1,12 @@
+{
+    "name": "reproduce-pulumi-issue-12168",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^16"
+    },
+    "dependencies": {
+        "@pulumi/aws": "^5.30.0",
+        "@pulumi/gcp": "^6.50.0",
+        "@pulumi/pulumi": "^3.55.0"
+    }
+}
