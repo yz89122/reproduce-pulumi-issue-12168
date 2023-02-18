@@ -9,4 +9,4 @@ export PULUMI_CONFIG_PASSPHRASE=''
 
 pulumi login "file://$PULUMI_HOME"
 
-pulumi --stack dev preview >/dev/null
+pulumi --stack dev preview
