@@ -7,10 +7,10 @@ const providers = (new Array(10))
     .fill(null)
     .map((_, i) => new gcp.Provider(`provider-${i}`, { project: 'test' }));
 
-const first = (new Array(2500))
+const firstLayer = (new Array(2500))
     .fill(null)
     .map((_, i) => new gcp.storage.Bucket(
-        `${i}`,
+        `first-layer-${i}`,
         { name: `${i}`, location: 'US-CENTRAL1' },
         { provider: randomPick(providers), }
     ));
@@ -18,7 +18,7 @@ const first = (new Array(2500))
 (new Array(2500))
     .fill(null)
     .map((_, i) => new gcp.storage.Bucket(
-        `${i}`,
-        { name: randomPick(first).name.apply(name => `${name}-${i}`), location: 'US-CENTRAL1' },
+        `second-layer-${i}`,
+        { name: randomPick(firstLayer).name.apply(name => `${name}-${i}`), location: 'US-CENTRAL1' },
         { provider: randomPick(providers), })
     );
