@@ -7,7 +7,7 @@ const providers = (new Array(10))
     .fill(null)
     .map((_, i) => new gcp.Provider(`provider-${i}`, { project: 'test' }));
 
-const first = (new Array(10000))
+const first = (new Array(2500))
     .fill(null)
     .map((_, i) => new gcp.storage.Bucket(
         `${i}`,
@@ -15,7 +15,7 @@ const first = (new Array(10000))
         { provider: randomPick(providers), }
     ));
 
-(new Array(10000))
+(new Array(2500))
     .fill(null)
     .map((_, i) => new gcp.storage.Bucket(
         `${i}`,
